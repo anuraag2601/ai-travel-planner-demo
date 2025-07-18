@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-ocean-500 to-ocean-600 hover:from-ocean-600 hover:to-ocean-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-ocean-700 font-semibold py-3 px-8 rounded-xl border-2 border-ocean-200 hover:border-ocean-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ease-out border border-gray-100;
+  }
+  
+  .tag {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ease-out cursor-pointer;
+  }
+  
+  .tag-selected {
+    @apply bg-gradient-to-r from-ocean-500 to-ocean-600 text-white shadow-lg;
+  }
+  
+  .tag-unselected {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-ocean-600 to-sunset-500 bg-clip-text text-transparent;
+  }
+  
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+} 
